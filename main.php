@@ -25,15 +25,15 @@ class Farm {
 
 class Animals extends Farm {
 
-    private static $cows = []; // статический массив для сохранения предыдущих данных
-    private static $chickens = []; // статический массив для сохранения предыдущих данных
+    private static $cows = []; // пустой статический массив для коров
+    private static $chickens = []; // пустой статический для кур
 
     public function addCows() {
         for ($i = 0; $i < $this->quantity; $i++) { // формируем массив для подсчета животных и продукции (в $this->quantity находится цисло переданное при создании экземпляра)
             $cow['count_products'] = rand(8, 12); // Корова может давать 8-12 литров молока за один надой
             self::$cows[] = $cow; // запись в статческий массив
         }
-        parent::registrationAnimals(self::$cows); // передаем массив Farm для дальнейшей обработки
+        parent::registrationAnimals(self::$cows); // передаем массив в Farm для дальнейшей обработки
     }
 
     public function addChicken() { // тут всё аналогично верхнему методу
